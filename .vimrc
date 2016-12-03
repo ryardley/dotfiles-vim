@@ -41,15 +41,13 @@ Plugin 'elzr/vim-json'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 "/Vundle
 
-"autocmd vimenter * NERDTree
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden=1
 
 "JSX/Javascript
@@ -77,9 +75,6 @@ highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
-"Try to autofix errors
-"autocmd BufWritePost *.js !eslint --fix %
-
 " Quick file save`
 :nnoremap <Leader>s :update<CR>
 " Quick close
@@ -92,4 +87,19 @@ highlight link SyntasticStyleWarningSign SignColumn
 :nnoremap <leader>t :NERDTreeToggle<enter>
 " YCMTern Autocomplete
 autocmd CompleteDone * pclose
+" Airline Theme
+let g:airline_theme='simple'
+let g:airline#extensions#tabline#enabled = 1
+
+:nnoremap <leader>[ :bprevious<cr>
+:nnoremap <leader>] :bnext<cr>
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+
+let g:ycm_key_list_select_completion=['<Enter>']
+let g:ycm_key_list_previous_completion=[]
 
