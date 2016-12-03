@@ -7,7 +7,7 @@ set ignorecase  "case insensitive search
 set smartcase
 set expandtab
 set tabstop=2
-set equalalways
+"set equalalways
 
 
 " Indentation
@@ -76,12 +76,20 @@ highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
+" Get out of insert mode
+:inoremap jj <Esc>
+
 " Quick file save`
-:nnoremap <Leader>s :update<CR>
+" :nnoremap <Leader>s :update<CR>
 " Quick close
-:nnoremap <leader>w :q<cr>
+" :nnoremap <leader>w :q<cr>
 " Quick quit
-:nnoremap <leader>q :q!<cr>
+" :nnoremap <leader>q :q!<cr>
+:nnoremap ; :
+:nnoremap : ;
+:vnoremap ; :
+:vnoremap : ;
+
 " Quick open vimrc
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " NERDTree 
