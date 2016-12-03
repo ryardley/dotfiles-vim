@@ -16,6 +16,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+set autoread
 set copyindent
 set preserveindent
 set nofoldenable
@@ -102,4 +103,6 @@ let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 let g:ycm_key_list_select_completion=['<Enter>']
 let g:ycm_key_list_previous_completion=[]
+
+autocmd BufWritePost *.js silent !eslint --fix %
 
