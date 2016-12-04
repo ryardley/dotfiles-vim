@@ -10,6 +10,11 @@
   $ brew install vim
   ```
 
+1. Install ag for your operating system
+
+  ```bash
+  $ brew install ag
+  ```
 
 2. Run the configure script
   ```bash
