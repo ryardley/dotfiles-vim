@@ -23,7 +23,7 @@ prompt() {
   local CYANBOLD="\[\033[1;36m\]"
   local WHITE="\[\033[0;37m\]"
   local WHITEBOLD="\[\033[1;37m\]"
-  export PS1="${YELLOW}╭«${GREEN}\w${CYAN}\$(parse_git_branch)${YELLOW}\n╰«${RED}❥${YELLOW}⚡${RED}»${WHITE} "
+  export PS1="${YELLOW}╭«${GREEN}\W${CYAN}\$(parse_git_branch)${YELLOW}\n╰«${RED}❥${YELLOW}⚡${RED}»${WHITE} "
 }
 
 # My Shortcuts
