@@ -24,6 +24,8 @@ set preserveindent
 set nofoldenable
 set breakindent
 set list lcs=trail:·,tab:»·
+set hlsearch
+
 
 " VUNDLE
 " The following is from https://github.com/VundleVim/Vundle.vim
@@ -38,20 +40,20 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
-"let g:airline_theme='bubblegum'
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='base16'
+"let g:airline#extensions#tabline#enabled = 1
 
 Plugin 'joshdick/onedark.vim'
-set t_Co=256
-set background=dark
-colorscheme onedark
-if (empty($TMUX))
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-let g:onedark_termcolors=256
-let g:airline_theme='onedark'
+" set t_Co=256
+" set background=dark
+" colorscheme onedark
+" if (empty($TMUX))
+"   if (has("termguicolors"))
+"     set termguicolors
+"   endif
+" endif
+" let g:onedark_termcolors=256
+" let g:airline_theme='onedark'
 
 Plugin 'scrooloose/nerdtree'
 let NERDTreeShowHidden=1
@@ -116,6 +118,9 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+Plugin 'w0ng/vim-hybrid'
+
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 "/Vundle
@@ -137,4 +142,5 @@ nmap <leader>w<left>   :leftabove  vnew<CR>
 nmap <leader>w<right>  :rightbelow vnew<CR>
 nmap <leader>w<up>     :leftabove  new<CR>
 nmap <leader>w<down>   :rightbelow new<CR>
-
+set background=dark
+colorscheme hybrid
