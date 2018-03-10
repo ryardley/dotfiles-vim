@@ -129,6 +129,12 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-alias vsb='code ~/client-projects/blockbid/Blockbid.code-workspace && cd ~/client-projects/blockbid && clear'
+alias vb='code ~/client-projects/blockbid/Blockbid.code-workspace && cd ~/client-projects/blockbid && clear'
 
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rudi/Documents/google-cloud-sdk/path.bash.inc' ]; then source '/Users/rudi/Documents/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/rudi/Documents/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/rudi/Documents/google-cloud-sdk/completion.bash.inc'; fi
